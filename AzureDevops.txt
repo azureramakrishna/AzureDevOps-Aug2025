@@ -1,0 +1,30 @@
+Welcome to AzureDevops:
+----------------------
+
+IAC:
+- ARMTemplates 
+- Terraform 
+
+AzureDevops 
+- Azure Boards (Agile)
+- Azure Repo (Git)
+- Azure Pipeline (CI CD)
+
+GitHub
+- Branching strategies
+- GitHub Actions (CI CD)
+
+Docker 
+AKS (Azure Kubernetes Service)
+
+
+IAC - Infrastrure as a code?
+
+Azure Portal
+Azure Powershell
+Azure CLI 
+
+IAC
+ARMTemplates 
+Terraform 
+Bicep

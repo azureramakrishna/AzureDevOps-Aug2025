@@ -1,0 +1,65 @@
+{
+    "TrainingModule": "AzureDevops",
+    "TrainerName": "Ramakrishna",
+    "TrainerContact": 9513184144,
+    "Address": {
+        "DoorNo": "123",
+        "Location": "Hyderabad",
+        "State": "Telangana",
+        "Country": "India"
+    },
+    "Topics": [
+        "IAC",
+        "ARMTemplates",
+        "Terraform",
+        "AzureDevops",
+        "GitHubActions",
+        "CI/CD",
+        "AzurePipelines",
+        "GitHub",
+        "VersionControl",
+        "Agile",
+        "Docker",
+        "Kubernetes-AKS"
+    ],
+
+    "Duration": "1 Month",
+
+    "Participants": [
+        {
+            "Name": "Jeevan",
+            "Location": "Bangalore",
+            "IsAzureAdmin": false
+        },
+        {
+            "Name": "Munesh",
+            "Location": "UK",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Umera",
+            "Location": "Bangalore",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Bhogeswar",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Medinya",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Rahil",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        },
+        {
+            "Name": "Ramya",
+            "Location": "Hyderabad",
+            "IsAzureAdmin": true
+        }
+    ]
+}

@@ -28,3 +28,8 @@ IAC
 ARMTemplates 
 Terraform 
 Bicep
+
+
+Getting started with ARMTemplates:
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-visual-studio-code?tabs=PowerShell

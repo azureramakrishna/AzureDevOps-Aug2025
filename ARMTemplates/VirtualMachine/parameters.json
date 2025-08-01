@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storage_account_name": {
+            "value": "Mystorage2022263w4"
+        },
+        "vm_name": {
+            "value": "MyVM"
+        },
+        "vm_size": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUser": {
+            "value": "azureuser"
+        },
+        "adminPassword": {
+            "value": "Azuredevops@12345"
+        }
+    }
+}

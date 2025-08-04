@@ -33,3 +33,28 @@ Bicep
 Getting started with ARMTemplates:
 
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-visual-studio-code?tabs=PowerShell
+
+
+
+ARMTemplates                                                            Terraform 
+------------                                                            ---------
+1. IAC tool                                                             1. IAC tool
+2. Specific to Azure                                                    2. OpenSource (Azure, AWS, GCP, OCI, IBM, Onprem, etc)
+3. JSON Format                                                          3. HCL (Hashicorp Configuration Language) Format 
+4. extension .json                                                      4. extension .tf 
+5. template.json                                                        5. main.tf
+   paramaeters.json                                                        variables.tf
+6. Structure:                                                           6. Build blocks:
+    Schema                                                                  provider (azurerm)
+    ContanetVersion                                                         resources
+    paramaeters                                                             outputs
+    variables
+    resources
+    outputs
+7. New-AzResourceGroupDeployment \                                      7. Teraform Lifecycle
+    -ResourceGroupName arm \                                                terraform init
+    -TemplateFile templates.json\                                           terraform validate
+    -TemplateParameterFile parameters.json\                                 terraform fmt 
+    -Verbose                                                                terraform plan 
+                                                                            terraform apply 
+                                                                            terraform destroy

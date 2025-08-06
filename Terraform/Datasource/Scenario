@@ -1,0 +1,9 @@
+ResourceGroup = saanvik-it-rg 
+VirtualNetwork = saanvik-it-VirtualNetwork
+Subnet = saanvik-it-subnet 
+Keyvault = saanvikitkv01
+Secret = vmpassword
+
+
+
+Deploy the same virtual machine

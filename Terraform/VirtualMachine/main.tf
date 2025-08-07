@@ -13,7 +13,7 @@ provider "azurerm" {
   resource_provider_registrations = "none"
   features {}
 
-  subscription_id = "your subscription id"
+  subscription_id = "2e28c82c-17d7-4303-b27a-4141b3d4088f"
 
 }
 
@@ -22,10 +22,10 @@ provider "random" {}
 # Terraform Backend
 terraform {
   backend "azurerm" {
-    resource_group_name = "storage-rg"           
-    storage_account_name = "saanvikittf"                               
-    container_name       = "tfstate"                                  
-    key                  = "terraform.tfstate"                   
+    resource_group_name  = "storage-rg"
+    storage_account_name = "saanvikittf"
+    container_name       = "tfstate"
+    key                  = "test.terraform.tfstate"
   }
 }
 
@@ -159,6 +159,22 @@ resource "azurerm_windows_virtual_machine" "vm" {
     sku       = "2025-Datacenter"
     version   = "latest"
   }
+}
+
+resource "azurerm_managed_disk" "example" {
+  name                 = "terraform-datadisk"
+  location             = azurerm_resource_group.rg.location
+  resource_group_name  = azurerm_resource_group.rg.name
+  storage_account_type = "UltraSSD_LRS"
+  create_option        = "Empty"
+  disk_size_gb         = "4"
+}
+
+resource "azurerm_virtual_machine_data_disk_attachment" "example" {
+  managed_disk_id    = azurerm_managed_disk.example.id
+  virtual_machine_id = azurerm_windows_virtual_machine.vm.id
+  lun                = "0"
+  caching            = "ReadOnly"
 }
 
 output "storage_account_blob_endpoint" {

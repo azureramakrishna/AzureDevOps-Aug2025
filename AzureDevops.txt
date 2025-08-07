@@ -58,3 +58,16 @@ ARMTemplates                                                            Terrafor
     -Verbose                                                                terraform plan 
                                                                             terraform apply 
                                                                             terraform destroy
+
+
+Terraform:
+---------
+
+1. count.index
+2. for_each
+3. terraform drift --> terraform plan -refresh-only 
+4. terraform import 
+    - define the rsource block 
+    - terraform import azurerm_storage_account.sa <resource-id>
+
+Terraform Modules:

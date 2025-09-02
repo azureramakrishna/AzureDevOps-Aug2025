@@ -1,11 +1,9 @@
 # Terraform Backend
 terraform {
   backend "azurerm" {
-    # use_oidc             = true 
-    # use_azuread_auth     = true
-    # tenant_id            = "459865f1-a8aa-450a-baec-8b47a9e5c904"
-    # client_id            = "d7563c32-4271-4b23-a818-a9d0401abaea"
-    resource_group_name = "storage-rg"
+    use_oidc             = true
+    use_azuread_auth     = true
+    resource_group_name  = "storage-rg"
     storage_account_name = "saanvikittf"
     container_name       = "tfstate"
     key                  = "prod.terraform.tfstate"

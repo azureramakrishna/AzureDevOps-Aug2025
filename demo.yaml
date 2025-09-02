@@ -1,0 +1,25 @@
+---
+TrainingModule: AzureDevops
+TrainerName: Ramakrishna 
+TrainerContact: 9513184144
+Address:
+  - DoorNo: 123
+    Location: Hyderbad
+    State: Telangana
+    Country: India
+Topics: ['demo', 'abcd']
+
+Duration: 30days
+
+Participants: 
+  - Name: Jeevan
+    Location: Banagalore
+    IsAzueAdmin: false
+
+  - Name: Umera
+    Location: Banagalore
+    IsAzueAdmin: false
+
+  - Name: Bhogeswar
+    Location: Hyderabad
+    IsAzueAdmin: true

@@ -71,3 +71,231 @@ Terraform:
     - terraform import azurerm_storage_account.sa <resource-id>
 
 Terraform Modules:
+
+
+AzureDevops:
+-----------
+
+aex.dev.azure.com 
+
+Azure Portal: portal.azure.com 
+AzureDevops:  dev.azure.com
+
+
+Azure Boards:
+------------
+
+Agile Process:
+-------------
+Sprint Model - 2 weeks 
+
+Sprint1 18th Aug - 29th Aug 
+Sprint2 1st Sept - 12 Sept 
+
+Sprint planing:
+Backlog items
+    pick the user stories 
+        crate task 
+
+Daily standup calls - 15min
+
+Retrospective: 
+    what went well
+    what didn't went well 
+    what can be improved
+
+
+Epic 
+    Feature 
+        UserStory
+            Task 
+                Issue/Bug
+
+
+Epic:   
+        Amazon Ecommerce website 
+
+Features:
+
+        Sign-up Page 
+        Login Page 
+        Home Page 
+        Products page 
+        Catelog page 
+        Payment Gateway 
+        Order history 
+        Tracking page 
+        Support page 
+    
+UserStory:
+         Sign-up with google account 
+          Sign-up with apple account 
+           Sign-up with facebook account 
+            Sign-up with email and password 
+
+         Login with google account 
+         Login with apple account 
+         Login with facebook account 
+         Login with email and password 
+          
+Task: 
+         
+         Sign-up with google account 
+          Sign-up with apple account 
+           Sign-up with facebook account 
+            Sign-up with email and password 
+
+         Login with google account 
+         Login with apple account 
+         Login with facebook account 
+         Login with email and password 
+
+
+Azure Repos:
+-----------
+2764  git
+ 2765  git config --global user.name "Ramakrishna A"
+ 2766  git config --global user.email aruvaramakrishna@gmail.com
+ 2767  git config -l
+ 2768  git clone https://saanvikit9@dev.azure.com/saanvikit9/IaC/_git/IaC
+ 2769  cd IaC/
+ 2770  ls
+ 2771  ls -a
+ 2772  cd .git/
+ 2773  ls
+ 2774  cat config
+ 2775  cd ..
+ 2776  ls
+ 2777  git branch
+ 2778  git status
+ 2779  git add .
+ 2780  git status
+ 2781  git commit -m "ARMTemplates"
+ 2782  git status
+ 2783  git push origin main
+ 2784  history
+ 2785  git status
+ 2786  git add .
+ 2787  git rm --cached Terraform/Modules/RemoteModule/.terraform/modules/remote-vm
+ 2788  git rm --cached Terraform/Modules/RemoteModule/.terraform/modules/remote-vm -f
+ 2789  git status
+ 2790  git log
+ 2791  git restore --staged .terraform
+ 2792  git restore --staged Terraform/VirtualMachine/.terraform/
+ 2793  git status
+ 2794  git restore --staged */*/.terraform/**
+ 2795  git rm --cached -r **/.terraform\n
+ 2796  git add .
+ 2797  git status
+ 2798  git commit -m "Terraform"
+ 2799  git push orign main
+ 2800  git push origin main
+ 2801  git status
+ 2802  git add .
+ 2803  git status
+ 2804  git commit -m "updated the README.md"
+ 2805  git push origin main
+ 2806  git branch
+ 2807  git branch --all
+ 2808  git fetch --all
+ 2809  git checkout develop
+ 2810  git checkout main
+ 2811  git branch
+ 2812  git checkout -b feature/removepassword
+ 2813  git status
+ 2814  git add .
+ 2815  git commit -m "password removed"
+ 2816  git push origin feature/removepassword
+ 2817  git checkout develop
+ 2818  git fetch origin develop
+ 2819  git pull origin develop
+ 2820  git checkout -b feature/terraformfix
+ 2821  git status
+ 2822  git add .
+ 2823  git commit -m "terraform fix"
+ 2824  git push origin feature/terraformfix
+ 2825  git remote -v
+ 2826  git checkout develop
+ 2827  git pull origin develop
+ 2828  git checkout -b feature/password
+ 2829  git status
+ 2830  git add .
+ 2831  git commit -m "included the vm password"
+ 2832  git push origin feature/password
+ 2833  git branch
+ 2834  git checkout develop
+ 2835  git banch
+ 2836  git branch
+ 2837  git branch -d feature/removepassword
+ 2838  git branch
+ 2839  git branch -d feature/terraformfix
+ 2840  git branch -D  feature/terraformfix
+ 2841  git branch
+ 2842  git merge feature/password
+ 2843  git branch -d feature/password
+ 2844  git branch
+ 2845  git branch --all
+ 2846  git fetch --all
+ 2847  git branch --all
+ 2848  git push origin -d feature/password
+ 2849  git push origin -d feature/terraformfix
+ 2850  git diff develop main
+ 2851  git branch
+ 2852  git status
+ 2853  git add .
+ 2854  git commit -m "description added"
+ 2855  git log
+ 2856  git revert 525bc5b6b97d4283e152743f2898815a83fac42a
+
+
+Azure Pipelines:
+---------------
+
+Pre-requisites:
+==============
+
+1. Agent pool:
+    - Microsoft Hosted agent pool (VM)
+    - Self Hosted agent pool (private VM)
+
+    28bQ5HRBtcCpnJWssEsbg9tnNa9msUkTw8jO3HXO4rLzDacwBrTAJQQJ99BHACAAAAAAAAAAAAASAZDOQrlf
+
+2. Service Connection
+    client_id: 975da947-ac55-4eda-b54e-5e6ca2747066
+    secret: yMr8Q~3-UJAEW1cJ6fG9L6.jIybmi9EvJ.vUIboD
+
+    tenant_id: 61207bd6-ad2c-4222-97de-abe051c23599
+    Subcriptoin_id: ace4f714-8869-4909-9885-964a034bd586
+    Subscription_Name: medhinyaazure
+
+
+Two types of pipelines:
+
+- Classic Editor (UI)
+- YAML Pipelines (Pipeline as a code)
+
+
+Azure pipelines to deploy ARMTemplates 
+Azure Pipeline to deploy the Terraform
+
+
+
+
+# Create a resource group
+az group create --location eastus2 --name saanvikit-rg
+
+# Create an app service plan of type Linux
+az appservice plan create -g saanvikit-rg -n saanvikit-service-plan --is-linux
+
+# Create an App Service from the plan with Tomcat and JRE 8 as the runtime
+az webapp create -g saanvikit-rg -p saanvikit-service-plan -n saanvikit-petclinic --runtime "JAVA|8-jre8"
+
+
+GitHub Actions:
+--------------
+
+GitHub Runners
+    - GitHub hosted runners 
+    - GitHub Self-Hosted runners
+
+App registration with Federation 

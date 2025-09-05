@@ -299,3 +299,62 @@ GitHub Runners
     - GitHub Self-Hosted runners
 
 App registration with Federation 
+
+CI - Contineous integration --> artifact (java->.jar/.war 
+                                          dotnet-> .csproj
+                                          python->.py
+                                          nodejs->.js)
+CD - Contineous deployment --> deploy to target env
+
+CD - Contineous delivery --> Manualy deploying the artifcts to target env
+
+
+Docker:
+------
+
+
+   1  # Add Docker's official GPG key:
+    2  sudo apt-get update
+    3  sudo apt-get install ca-certificates curl
+    4  sudo install -m 0755 -d /etc/apt/keyrings
+    5  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    6  sudo chmod a+r /etc/apt/keyrings/docker.asc
+    7  # Add the repository to Apt sources:
+    8  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    9  sudo apt-get update
+   10  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   11  docker
+   12  docker run nginx
+   13  docker images
+   14  docker ps
+   16  docker ps -a
+   17  docker pull ubuntu:latest
+   18  docker images
+   19  docker run --name saanvikit -itd ubuntu:latest
+   20  docker ps
+   21  docker attach 592d
+   22  docker ps
+   23  docker ps -a
+   24  docker run --name saanvikit1 -it ubuntu:latest
+   25  docker ps
+   26  history
+   27  docker ps
+   28  docker attach 79ae
+   29  docker ps -a
+   30  docker pull ubuntu:24.04
+   31  docker images
+   32  docker run --name saanvikit2 -it ubuntu:24.04
+   33  docker run --name saanvikit3 -it amazonlinux
+   34  docker ps
+   35  docker commit 1b9e amazonlinux:1.0
+   36  docker images
+   37  docker run --name saanvikit4 -it amazonlinux:1.0
+   38  docker ps
+   39  docker images
+   40  docker tag amazonlinux:1.0 saanvikit/amazonlinux:1.0
+   41  docker images
+   42  docker login
+   43  docker login -u saanvikit
+   44  docker images
+   45  docker push saanvikit/amazonlinux:1.0
